@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sổ Nợ Quê - Quản lý nợ thông minh</title>
+    
+    <!-- Meta tags cho việc chia sẻ qua Zalo/Facebook -->
+    <meta name="description" content="Ứng dụng quản lý nợ dành cho tiểu thương và cửa hàng nhỏ. Giao diện thân thiện, dễ dùng.">
+    <meta property="og:title" content="Sổ Nợ Quê">
+    <meta property="og:description" content="Quản lý nợ khách hàng và nhà cung cấp chuyên nghiệp.">
+    <meta property="og:type" content="website">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;600;700;800&family=Nunito:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2e7d32",
+                        "primary-bright": "#2bee6c",
+                        "primary-dark": "#1b5e20",
+                        "danger": "#d32f2f",
+                        "debt-orange": "#ea580c",
+                        "debt-bg": "#ef6c00",
+                        "header-blue": "#0A56A2",
+                        "background-light": "#fbf8f1",
+                        "paper": "#ffffff",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "Inter", "sans-serif"],
+                        "nunito": ["Nunito", "sans-serif"],
+                    },
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                        'float': '0 10px 30px -5px rgba(43, 238, 108, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .market-pattern {
+            background-color: #fefbf6;
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .paper-texture {
+            background-color: #fcfdfc;
+            background-image: 
+                linear-gradient(#e5e7eb 1px, transparent 1px),
+                linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        @keyframes subtle-pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .animate-subtle-pulse {
+            animation: subtle-pulse 3s infinite ease-in-out;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.0"
+  }
+}
+</script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div id="root"></div>
+    <!-- Vite sẽ tự động tìm file entry point này -->
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>

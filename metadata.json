@@ -1,0 +1,8 @@
+{
+  "name": "Sổ Nợ Quê - Debt Manager",
+  "description": "A rustic-styled debt management application for local market vendors and small businesses to track customer debts and supplier payments.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
